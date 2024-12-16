@@ -1,0 +1,22 @@
+ALGORITHM write_sentence
+VAR
+    a1,b2,c3 := string
+BEGIN
+    a1 := 0;
+    b2 := 1;
+    c3 := 0;
+    write ("type the sentence");
+    read (sentc);
+    REPEAT
+        IF (sentc{a1}:= " ") THEN
+            b2 := b2+1;
+        END_IF
+        IF (snetc{a1} in {"a","e","u","i","o","y"}) THEN
+            c3 := c3+1
+           END_IF
+           a1 := a1+1
+    UNTIL (sentc{a1 := "."});
+    write(" the number of caracteres is", a1+1);
+    write("the number of wolds is", b2);
+    wrtite("the number of vowels is", c3);
+END
